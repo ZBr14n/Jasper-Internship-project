@@ -1,0 +1,74 @@
+{
+                    zipCodeValueContext !== "" || doctorNameValueContext !== "" || averageRatingContext !== "" ?
+                        doctorDirectory.map(
+                            (entry) => entry.body.map((entry) => entry).filter(entry => (entry.rating === averageRatingContext) || (entry.zipcode === zipCodeValueContext) || (entry.first_name + " " + entry.last_name === doctorNameValueContext)).map((entry, key) => (
+                                
+                                <a href="#" onClick={(event)=>ModalOpen(key,event)} key={key} id={entry.doctor_id} ref={refID} className="profile__container-link">
+                                    
+                                    <div className="profile__wrapper" key={key} id={entry.doctor_id} ref={refID}>
+                                    
+                                        <div className="profile__index">{key+1}</div>
+                                        <div className="profile__photo">
+                                            <img src={entry.image} alt="profile image"/>
+                                        </div>
+
+                                        <ul className="profile__list">
+                                            <li>{entry.doctor_id}</li>
+                                            <li>Dr. {entry.first_name + " " + entry.last_name}</li>
+                                            <li>{entry.specialty}</li>
+                                            <li>at {entry.address_line_1 !== "" || entry.address_line_2 !== "" ? entry.address_line_1 + " " + entry.address_line_2 : null}</li>
+                                            <li><span><Icon icon='check' size='1x' /></span><span>Accepts Insurance</span></li>
+                                                      
+                                            <li><span><Rate value={entry.rating} readOnly allowHalf /></span><span><button type="submit" className="profile__view--btn">View</button></span></li>
+                                        </ul>
+                                    </div>
+
+                                </a>                                                                
+                            ))
+                        ) : null
+                }
+
+
+
+
+
+=========================================================
+
+This code works to get the average (note: the quotations which is different than the usual period for an object):
+<li>Rating: {entry["AVG(doctor_reviews.rating)"]}</li>
+
+=======================================================
+
+
+/* <div className="profile">
+          {
+            officeLocation.map((entry, index) => (
+
+              <a href="#" onClick={()=>ModalOpen(index)} ref={refID} id={index} className="profile__container-link">
+
+                        <div className="profile__wrapper" key={entry.id}>
+                        {hasData = true}
+                        <div className="profile__index">{index+1}</div>
+                        <div className="profile__photo">
+                            <img src="https://source.unsplash.com/240x240/?dentist" loading="lazy" alt="profile"/>
+                        </div>
+
+                        <ul className="profile__list">
+                            <li>{node.title}</li>
+                            <li><a href={node.matchCompanyWebsite} target="_blank">{node.matchCompanyWebsite}</a></li>
+                            <li>{node.termNames[1]}</li>
+                            <li>{node.matchLocation}</li>
+                            <li><span><Icon icon='check' size='3x' /></span><span>Accepts Insurance $$</span></li>
+                                                    
+                            
+                            <li>{getDistanceValue(index)}</li>
+                                                    
+                            <li><Rate defaultValue={4.5} readOnly allowHalf /></li>
+                        </ul>
+                        </div>
+
+              </a>
+              
+            ))
+          }
+          </div> */}

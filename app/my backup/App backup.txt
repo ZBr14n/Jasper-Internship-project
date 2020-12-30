@@ -1,0 +1,25 @@
+      <FlexboxGrid justify="space-between">
+        <FlexboxGrid justify="center">
+            <FlexboxGrid.Item>
+              {/* <button type="submit" onClick={getSurveyResult}>call fetch</button> */}
+              <SideNav surveyResult={surveyResult} />
+            </FlexboxGrid.Item>
+
+            <FlexboxGrid.Item colspan={4}>
+              {
+                  <Profile />
+              }
+            </FlexboxGrid.Item>
+        </FlexboxGrid>
+
+
+        <FlexboxGrid justify="end">
+            
+
+            <FlexboxGrid.Item>
+
+              {/* <GoogleMapComponent /> */}
+              
+            </FlexboxGrid.Item>
+        </FlexboxGrid>
+      </FlexboxGrid>

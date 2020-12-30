@@ -1,0 +1,29 @@
+let InsuranceCarriers = [
+    {
+        "label": "HMO",
+        "value": 
+    },
+    {
+        "label": "Open Access Select (Health Fund)",
+        "value": "Open Access Select (Health Fund)"
+    },
+    {
+        "label":  "Open Choice PPO",
+        "value":  "Open Choice PPO"
+    },
+    {
+        "label:":"Traditional Choice Indemnity",
+        "value":"Traditional Choice Indemnity"
+    }
+    {
+      "label": "Blue Cross Blue Shield (BCBS)",
+      "value": ["Anthem Blue Cross Blue Shield","Empire Blue Cross Blue Shield","Blue Cross Blue Shield of Massachusetts"]
+    },
+    {
+      "label": "Cigna",
+      "value": ["HMO","Medicare Access","Indemnity","Choice Fund PPO"]
+    }    
+  ]
+
+
+  export default InsuranceCarriers

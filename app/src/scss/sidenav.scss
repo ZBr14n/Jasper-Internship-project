@@ -1,0 +1,31 @@
+.side__nav-type-of-doctor{
+    display: flex;
+    align-items: center;    
+}
+.sidenav__purpose{
+    display: flex;
+    align-items: center;    
+}
+
+.insurance-container{
+    display: flex;
+    align-items: center;
+}
+
+.sidenav__btn-reset{
+    width: 187px;
+    height: 36px;
+    border: 1px solid #49A69D;
+    box-sizing: border-box;
+    border-radius: 28px;
+
+    font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+text-align: center;
+
+/* Jasper Green 2 */
+color: #49A69D;
+}

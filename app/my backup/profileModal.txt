@@ -1,0 +1,266 @@
+<GoogleMap
+                                    mapContainerStyle={containerStyle}
+                                    center={props.geoCode.flat()}
+                                    zoom={13}
+                                >
+                                    { /* Child components, such as markers, info windows, etc. */ }
+                                    <>
+                                        <Marker
+                                            onLoad={onLoad}
+                                            position={props.geoCode.flat()}
+                                        />
+                                    </>
+                                </GoogleMap>
+
+
+=============================================
+
+
+<h3>About the Best Dentist Group</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+                Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                nobis, corporis, perspiciatis iure nihil, sequi cum rerum unde libero?</p>
+
+            <div>
+                <p>Website: dentistname.com</p>
+                <p>Phone: (123) 854 - 2455</p>
+                <p>1234 Oak Street</p>
+            </div>
+
+
+
+<p className={'footer-section-paragraphs'} style={{color:'#FCFCFC'}}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
+                        Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                        Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                        Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                        Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                        Quo molestiae magnam voluptatem laboriosam laudantium repellat <br />
+                        nobis, corporis, perspiciatis iure nihil, sequi cum rerum unde libero?</p> <br />
+
+
+=========================================================
+{
+    props.doctorReview.flat().map(entry => String(entry.doctor_id) === DoctorID.flat().map(entry => 
+        entry)[0] ? (
+            <FlexboxGrid align="middle">
+                <FlexboxGrid.Item>
+                    <Avatar src={'https://source.unsplash.com/287x287/?dentist'} circle size={'sm'} classPrefix={'profileModal__patientImage'} />
+                </FlexboxGrid.Item>
+                
+                <FlexboxGrid.Item>
+                    {/* <div>{props.patientName.body.map(entry => entry.first_name + ' ' + entry.last_name)}</div> */}
+                    <div style={{width:'200px'}}>{entry.review}</div>
+                </FlexboxGrid.Item>
+
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={entry.rating} readOnly />
+                    <Container><small>was this review helpful? <span><a href="http://">Yes </a></span><span><a href="http://"> No</a></span></small></Container>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+        )
+    
+    : null)
+}
+
+
+=======================================================================
+
+const dataProfileModal = [
+        {
+          "label": "Delta HMO Plan",
+          "value": "Delta HMO Plan",
+          "role": "Master"
+        },
+        {
+          "label": "Delta HMO Plan",
+          "value": "Delta HMO Plan",
+          "role": "Master"
+        },
+        {
+          "label": "Louisa",
+          "value": "Louisa",
+          "role": "Master"
+        }
+    ]
+    const dataProfileModal2 = [{
+        "label": "Cl",
+        "value": "General Cleaning"
+    }]
+
+
+
+    classPrefix={'profileModal__insurance-carrier'} 
+classPrefix={'profileModal__insurance-plan'} 
+
+================================================================================
+
+
+<FlexboxGrid>
+    <FlexboxGrid.Item>
+        <Avatar circle />                
+    </FlexboxGrid.Item>
+    <FlexboxGrid.Item>
+        <p>Name</p>
+        <p>this dental is....</p>
+    </FlexboxGrid.Item>
+    <FlexboxGrid.Item>
+        <Rate defaultValue={5} />
+        <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+    </FlexboxGrid.Item>
+</FlexboxGrid>
+
+
+
+<FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+
+{/* collapsible panel starts here */}
+<PanelGroup accordion>
+    <Panel header="More Reviews..." bordered={false} defaultExpanded={false}>
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+
+            <FlexboxGrid>
+                <FlexboxGrid.Item>
+                    <Avatar circle />                
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <p>Name</p>
+                    <p>this dental is....</p>
+                </FlexboxGrid.Item>
+                <FlexboxGrid.Item>
+                    <Rate defaultValue={5} />
+                    <p>Was this review helpful? <u><a href="#">Yes </a> <a href="#">No</a></u></p>
+                </FlexboxGrid.Item>
+            </FlexboxGrid>
+
+        
+    </Panel>
+</PanelGroup>
+
+{/* <PaginationBasic /> */}
