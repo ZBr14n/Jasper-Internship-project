@@ -1,3 +1,7 @@
+### **Update** Please see the other part of the project that includes a questionairre survey before this information gets processed to the search directory:
+https://github.com/ZBr14n/Jasper-Internship-project/tree/jasper-survey/medical-survey-jasper/app/src
+
+
 #### For this internship project, I was assigned to create a medical survey that will take answers from patients and populate this information into the search directory, which will show all available dental offices based on location/zipcode, medical conditions, doctor's name. For each entry that is populated, the user is able to click into the modal popup that will populate for that specific doctor. The popuop will display all doctor's information including their ratings and reviews as well as letting the user book an appoinment with the doctor.
 
 
