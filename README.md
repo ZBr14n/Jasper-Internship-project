@@ -1,4 +1,4 @@
-### **Update** Please see the other part of the project that includes a questionairre survey before this information gets processed to the search directory:
+### **Update: ** Please see the other part of the project that includes a questionairre survey before this information gets processed to the search directory:
 https://github.com/ZBr14n/Jasper-Internship-project/tree/jasper-survey/medical-survey-jasper/app/src
 
 
