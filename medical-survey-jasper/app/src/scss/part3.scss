@@ -1,0 +1,84 @@
+.part3-header{
+    font-family: Nunito Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 38px;
+display: flex;
+align-items: center;
+
+/* Jasper Black */
+color: #151515;
+}
+
+.btn-skip{
+    
+/* Jasper True White */
+background: #FFFFFF;
+
+/* Jasper Green 1 */
+border: 2px solid #037971;
+border-radius: 38px;
+
+width: 175px;
+height: 54px;
+}
+
+
+.btn-continue{
+    /* Jasper Green 1 */
+background: #037971;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+border-radius: 38px;
+
+width: 305px;
+height: 54px;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1.25px;
+
+/* Jasper True White */
+color: #FFFFFF;
+opacity: 0.87;
+}
+
+
+.part3-btn{
+    background: linear-gradient(96.07deg, #0CB7AB 6.97%, #037971 93.36%);
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+border-radius: 29px;
+
+width: 608px;
+height: 54px;
+
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1.25px;
+
+/* Jasper True White */
+color: #FFFFFF;
+opacity: 0.87;
+
+/* Jasper Green 1 */
+border: 1px solid #037971;
+box-sizing: border-box;
+}
+
+.part3-btn:focus{
+    outline: 2px solid #b5b5b5;
+    border: 2px solid #b5b5b5;
+}

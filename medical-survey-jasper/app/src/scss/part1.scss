@@ -1,0 +1,115 @@
+.part1-content-wrapper{
+    position: relative;
+}
+.part1-btn-group{
+    position: absolute;
+    left: 0;
+}
+
+
+
+.btn-yes, .btn-no{
+    margin: 20px 0;
+
+    background: linear-gradient(135.17deg, #0CB7AB 6.97%, #037971 93.36%);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 250px;
+
+    color: #FCFCFC;
+    opacity: 0.87;
+
+    width: 175px;
+    height: 54px;
+}
+.btn-yes:focus{
+    outline: 2px solid #b5b5b5;
+    border: 2px solid #b5b5b5;
+}
+.btn-no:focus{
+    outline: 2px solid #b5b5b5;
+    border: 2px solid #b5b5b5;
+}
+
+
+
+
+.part1-btn{
+    display: flex;
+    flex-direction: column;
+    padding: -200px 0;
+}
+.part1-header{
+    font-family: Nunito Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 38px;
+align-items: center;
+color: #151515;
+padding-bottom: 20px;
+}
+
+.btn-skip{
+    /* Jasper True White */
+background: #FFFFFF;
+
+/* Jasper Green 1 */
+border: 2px solid #037971;
+border-radius: 38px;
+
+width: 175px;
+height: 54px;
+}
+.btn-continue{
+    background: #037971;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+border-radius: 38px;
+width: 305px;
+height: 54px;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+letter-spacing: 1.25px;
+padding: 20px;
+
+/* Jasper True White */
+color: #FFFFFF;
+opacity: 0.87;
+}
+
+// .rs-btn-group{
+//     width: 175px;
+//     height: 54;
+
+// //     background: linear-gradient(96.07deg, #0CB7AB 6.97%, #037971 93.36%);
+// // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+// border-radius: 29px;
+// }
+// .rs-btn{
+//     background: linear-gradient(96.07deg, #0CB7AB 6.97%, #037971 93.36%);
+//     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+//     border-radius: 29px;
+
+//     width: 200px;
+
+//     font-family: Open Sans;
+// font-style: normal;
+// font-weight: 600;
+// font-size: 16px;
+// line-height: 22px;
+// display: flex;
+// align-items: center;
+// text-align: center;
+// letter-spacing: 1.25px;
+
+// /* Jasper True White */
+// color: #FFFFFF;
+// opacity: 0.87;
+// }

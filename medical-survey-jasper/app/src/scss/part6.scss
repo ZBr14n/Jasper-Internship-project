@@ -1,0 +1,55 @@
+.btn-skip{
+    /* Jasper True White */
+background: #FFFFFF;
+
+/* Jasper Green 1 */
+border: 2px solid #037971;
+border-radius: 38px;
+}
+
+.btn-continue{
+    /* Jasper Green 1 */
+background: #037971;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+border-radius: 38px;
+
+width: 305px;
+height: 54px;
+}
+
+.part6-location{
+    font-family: Nunito Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+
+/* Jasper Black */
+color: #151515;
+}
+
+.part6-header{
+    font-family: Nunito Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 38px;
+display: flex;
+align-items: center;
+
+/* Jasper Black */
+color: #151515;
+}
+
+.google-suggestions{
+    /* Jasper White */
+background: #FCFCFC;
+
+/* Jasper Gray 3 */
+border: 2px solid #C4C4C4;
+box-sizing: border-box;
+border-radius: 8px;
+
+width: 674px;
+height: 68;
+}

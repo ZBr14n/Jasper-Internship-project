@@ -1,0 +1,16 @@
+                <Link to="part2">
+                    <button style={{display:'block', margin:'-20px 0'}} type="submit" className="btn-yes" onClick={(event)=>handleContinue(event)} value={'Yes'}>Yes</button>            
+                </Link>
+
+                <Link to="part2">
+                <button style={{display:'block'}} type="submit" className="btn-no" onClick={(event)=>handleContinue(event)} value={'No'}>No</button>   
+                </Link>
+
+
+
+
+                    // ! Following UI/UX update since 8/17
+        // once the user clicks Continue button, this will record user input into SessionStorage.
+        const handleContinue = (event) => {
+            sessionStorage.setItem('part1',event.target.value)
+        }

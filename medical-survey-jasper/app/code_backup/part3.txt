@@ -1,0 +1,15 @@
+            <Link to="part4">
+                <Button onClick={(event)=>handleContinue(event)} appearance={'default'} value={'I need a routine checkup and cleaning'}>I need a routine checkup and cleaning</Button>
+                <br /><br />
+                <Button onClick={(event)=>handleContinue(event)} appearance={'default'} value={'I need to schedule a specific treatment'}>I need to schedule a specific treatment</Button>
+                <br /><br />
+                <Button onClick={(event)=>handleContinue(event)} appearance={'default'} value={'I have to see a dentist ASAP for an urgent issue'}>I have to see a dentist ASAP for an urgent issue</Button>
+            </Link>
+
+
+
+                // ! UI/UX update 
+    // once the user clicks Continue button, this will record user input into SessionStorage.
+    const handleContinue = (event) => {
+        sessionStorage.setItem('part3',event.target.value)
+    }
