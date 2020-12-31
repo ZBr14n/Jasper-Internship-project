@@ -1,0 +1,3 @@
+
+
+### We're Jasper, patient engagement and payments platform based in NYC. We help medical offices improve the patient journey by collecting insurance, paperwork and co-pays prior to the appointment, improve communication through admin / patient texting and offers payment plans to help patients complete their care. Overall, we're trying to reduce the burden on administrators in the healthcare space!
