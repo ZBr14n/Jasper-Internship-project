@@ -1,0 +1,90 @@
+.loading-icon{
+    text-align: center;
+}
+
+// .rs-btn{
+//     background: #037971;
+// border-radius: 2px;
+// }
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // max-width: 100%;
+    margin: auto;
+    
+}
+
+.rs-rate{
+    color:#49A69D;
+}
+
+.profile__index{
+    padding: 10px;
+}
+.profile__container-link{
+    // background: #F0F0F0;
+    // box-shadow: 4px 3px 5px rgba(158, 158, 158, 0.58), -3px -3px 4px #FFFFFF;
+    // border-radius: 16px;
+
+    background: #FCFCFC;
+    border-radius: 10px;
+}
+.profile__view--btn{
+    // padding-left: 20px;
+    background: #49A69D;
+    border-radius: 13px;
+    color: #FFFFFF;
+}
+
+.profile__wrapper{
+ display: flex;   
+ align-items: center;
+ padding: 10px;
+}
+
+.profile__list{
+    list-style: none;
+}
+
+
+
+
+.profile__photo{
+    max-width: 100%;
+    height: auto;
+    
+    animation: 5s ease-out AnimateImages;
+}
+@keyframes AnimateImages{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+// ProfileModal
+.rs-panel-heading::before{
+    visibility: hidden;
+}
+.rs-flex-box-grid-item{
+    padding: 20px;
+}
+
+.footer-flex{
+    background-color: #F2F2F2;
+}
+
+
+
+
+.doctor__appointment{
+    box-shadow: 0px 4px 39px rgba(0, 0, 0, 0.25);
+    border-radius: 46px;
+}
+
+

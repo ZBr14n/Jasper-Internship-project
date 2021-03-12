@@ -1,23 +1,134 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import GoogleMapComponent from './components/sub-components/GoogleMapComponent'
+
+import 'rsuite/dist/styles/rsuite-default.css'
+import { Container, Header, Content, Footer, Sidebar,
+  FlexboxGrid,
+  Button
+ } from 'rsuite';
+import './scss/App.scss';
+
+
+import SideNav from './components/SideNav';
+import Profile from './components/Profile';
+
+import {ZipCodeContext, ZipCodeValueContext} from './Context/validZipCodeContext'
+import {DoctorNameContext, DoctorNameValueContext} from './Context/validDoctorNameContext'
+import {AverageRatingValueContext} from './Context/AverageRatingContext'
+import {TimeAvailValueContext} from './Context/TimeAvailContext'
+
+import Booking from './components/booking/Booking'
+import "./scss/calendar.scss"
 
 function App() {
+
+  // const items = props.settings.component  || [];
+  
+
+  const [averageRatingValue, setAverageRatingValue] = React.useState("")
+  const [timeAvailValue, setTimeAvailValue] = React.useState("")
+
+
+  // did the user choose to enter the zipcode?
+  const [zipCode, setZipCode] = React.useState(false)
+  // get the actual value for user input Zip Code
+  const [zipCodeValue, setZipCodeValue] = React.useState("")
+
+  const [doctorName, setDoctorName] = React.useState("")
+  const [doctorNameValue, setDoctorNameValue] = React.useState("")
+  
+  const [surveyResult, setSurveyResult] = React.useState([])
+
+ 
+  
+  React.useEffect(() => {
+    // check if the search app was loaded by https://jasperbrian-lam-local.local/survey/ , if so, populate quiz responses to seach filter.
+    // if(document.referrer === window.location.origin + "survey/"){}
+        fetch(window.location.origin + '/wp-json/wp/v2/posts/')
+          .then(res => res.json())
+          .then(data => {
+            // console.log(typeof(data[0].content.rendered))
+            setSurveyResult(results => [...results, data[0].content.rendered])
+          })
+    
+          // console.log('items: ' + items.map(entry => entry))
+  },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <AverageRatingValueContext.Provider value={[averageRatingValue, setAverageRatingValue]}>
+      <TimeAvailValueContext.Provider value={[timeAvailValue, setTimeAvailValue]}>
+
+      <DoctorNameContext.Provider value={[doctorName, setDoctorName]}>
+      <DoctorNameValueContext.Provider value={[doctorNameValue, setDoctorNameValue]}>
+
+            <ZipCodeValueContext.Provider value={[zipCodeValue, setZipCodeValue]}>
+            <ZipCodeContext.Provider value={[zipCode, setZipCode]}>
+                    
+              <FlexboxGrid justify="space-between" align="middle">
+
+                <FlexboxGrid justify="start">
+                  <FlexboxGrid.Item>
+                    <svg width="278" viewBox="0 0 734 278" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M228.207 178.031C224.797 178.18 222.202 177.66 220.423 176.474C218.717 175.288 217.865 173.472 217.865 171.026C217.865 168.802 218.421 167.171 219.533 166.133C220.645 165.021 222.387 164.391 224.76 164.242L228.319 164.02C233.657 163.798 236.326 160.647 236.326 154.568V106.974C236.326 104.38 237.142 102.304 238.773 100.747C240.404 99.1904 242.517 98.412 245.112 98.412C247.707 98.412 249.783 99.1904 251.34 100.747C252.971 102.304 253.786 104.38 253.786 106.974V154.346C253.786 169.024 246.446 176.845 231.766 177.809L228.207 178.031ZM342.973 166.8C343.566 168.134 343.863 169.32 343.863 170.358C343.863 172.434 343.01 174.213 341.305 175.696C339.674 177.104 337.783 177.809 335.633 177.809C334.224 177.809 332.89 177.438 331.63 176.697C330.369 175.881 329.406 174.695 328.738 173.138L322.844 160.017H285.143L279.249 173.138C278.582 174.695 277.617 175.881 276.357 176.697C275.171 177.438 273.836 177.809 272.354 177.809C270.203 177.809 268.276 177.104 266.571 175.696C264.865 174.213 264.013 172.434 264.013 170.358C264.013 169.32 264.309 168.134 264.902 166.8L294.93 103.75C295.745 101.97 296.968 100.636 298.6 99.7464C300.231 98.7829 301.973 98.3008 303.827 98.3008C305.754 98.3008 307.533 98.7829 309.165 99.7464C310.796 100.71 312.056 102.044 312.946 103.75L342.973 166.8ZM316.95 146.895L304.049 117.983L291.037 146.895H316.95ZM381.143 178.365C375.285 178.365 369.836 177.698 364.794 176.363C359.753 174.955 355.638 172.99 352.45 170.47C351.338 169.654 350.522 168.802 350.003 167.912C349.558 166.948 349.336 165.762 349.336 164.354C349.336 162.5 349.892 160.869 351.004 159.461C352.19 158.052 353.525 157.348 355.008 157.348C355.823 157.348 356.601 157.496 357.343 157.793C358.158 158.015 359.123 158.46 360.235 159.127C363.423 161.129 366.648 162.612 369.91 163.575C373.172 164.465 376.768 164.91 380.698 164.91C385.591 164.91 389.335 164.094 391.93 162.463C394.525 160.832 395.823 158.497 395.823 155.458C395.823 153.16 394.599 151.306 392.152 149.898C389.78 148.489 385.516 147.155 379.363 145.894C372.468 144.486 366.944 142.781 362.793 140.779C358.714 138.778 355.712 136.294 353.784 133.329C351.93 130.364 351.004 126.768 351.004 122.542C351.004 117.872 352.339 113.684 355.008 109.977C357.751 106.196 361.495 103.268 366.24 101.192C371.059 99.042 376.472 97.9672 382.477 97.9672C393.005 97.9672 401.68 100.599 408.501 105.862C409.613 106.752 410.391 107.679 410.836 108.642C411.355 109.532 411.615 110.644 411.615 111.978C411.615 113.832 411.021 115.463 409.835 116.871C408.723 118.28 407.425 118.984 405.943 118.984C405.127 118.984 404.349 118.873 403.607 118.65C402.94 118.428 401.976 117.946 400.716 117.205C397.676 115.277 394.858 113.832 392.264 112.868C389.743 111.904 386.517 111.422 382.588 111.422C378.065 111.422 374.506 112.312 371.912 114.091C369.317 115.796 368.019 118.168 368.019 121.208C368.019 122.987 368.501 124.47 369.465 125.656C370.503 126.768 372.171 127.769 374.47 128.658C376.842 129.548 380.178 130.475 384.479 131.438C394.562 133.662 401.791 136.516 406.165 140.001C410.614 143.485 412.838 148.267 412.838 154.346C412.838 159.09 411.503 163.279 408.834 166.911C406.239 170.544 402.532 173.361 397.713 175.362C392.968 177.364 387.444 178.365 381.143 178.365ZM434.565 178.031C431.896 178.031 429.783 177.253 428.226 175.696C426.669 174.139 425.89 172.026 425.89 169.358V107.086C425.89 104.491 426.595 102.489 428.003 101.081C429.412 99.6725 431.414 98.968 434.009 98.968H461.923C470.45 98.968 477.085 101.118 481.83 105.418C486.576 109.717 488.948 115.722 488.948 123.432C488.948 131.142 486.576 137.147 481.83 141.446C477.085 145.746 470.45 147.896 461.923 147.896H443.239V169.358C443.239 172.026 442.461 174.139 440.904 175.696C439.347 177.253 437.234 178.031 434.565 178.031ZM459.699 134.774C468.373 134.774 472.711 131.031 472.711 123.543C472.711 115.982 468.373 112.201 459.699 112.201H443.239V134.774H459.699ZM508.851 177.364C506.256 177.364 504.254 176.66 502.846 175.251C501.437 173.843 500.733 171.841 500.733 169.246V107.086C500.733 104.491 501.437 102.489 502.846 101.081C504.254 99.6725 506.256 98.968 508.851 98.968H548.22C553.707 98.968 556.45 101.192 556.45 105.64C556.45 110.162 553.707 112.423 548.22 112.423H517.637V130.771H545.996C551.483 130.771 554.226 133.032 554.226 137.554C554.226 142.002 551.483 144.226 545.996 144.226H517.637V163.909H548.22C553.707 163.909 556.45 166.17 556.45 170.692C556.45 175.14 553.707 177.364 548.22 177.364H508.851ZM631.491 166.355C632.603 167.986 633.159 169.58 633.159 171.137C633.159 173.212 632.308 174.918 630.601 176.252C628.972 177.586 627.042 178.254 624.818 178.254C623.411 178.254 622.037 177.92 620.703 177.253C619.368 176.586 618.256 175.548 617.367 174.139L602.687 152.344C601.43 150.416 600.095 149.045 598.683 148.23C597.276 147.34 595.497 146.895 593.345 146.895H584.337V169.358C584.337 172.026 583.558 174.139 582.001 175.696C580.522 177.253 578.481 178.031 575.884 178.031C573.215 178.031 571.102 177.253 569.545 175.696C567.988 174.139 567.21 172.026 567.21 169.358V107.086C567.21 104.491 567.916 102.489 569.323 101.081C570.735 99.6725 572.737 98.968 575.328 98.968H603.243C612.44 98.968 619.368 101.007 624.039 105.084C628.788 109.087 631.157 114.907 631.157 122.542C631.157 128.547 629.489 133.551 626.152 137.554C622.816 141.558 618.112 144.189 612.028 145.45C614.253 145.894 616.221 146.784 617.923 148.118C619.702 149.379 621.409 151.232 623.038 153.678L631.491 166.355ZM600.685 133.774C605.656 133.774 609.248 132.921 611.472 131.216C613.697 129.437 614.809 126.694 614.809 122.987C614.809 119.206 613.697 116.464 611.472 114.758C609.248 113.053 605.656 112.201 600.685 112.201H584.114V133.774H600.685Z" fill="black"/>
+                      <path d="M172.935 116.204V63.384C172.935 57.2426 167.956 52.264 161.814 52.264H145.132C138.99 52.264 134.011 57.2426 134.011 63.384V116.204C134.011 122.345 138.99 127.324 145.132 127.324H161.814C167.956 127.324 172.935 122.345 172.935 116.204Z" fill="#F06C9B" fill-opacity="0.7"/>
+                      <path d="M161.814 51.152H108.988C102.846 51.152 97.8667 56.1306 97.8667 62.272V78.952C97.8667 85.0934 102.846 90.072 108.988 90.072H161.814C167.956 90.072 172.935 85.0934 172.935 78.952V62.272C172.935 56.1306 167.956 51.152 161.814 51.152Z" fill="#F06C9B" fill-opacity="0.7"/>
+                      <path d="M135.196 170.36V139C135.196 132.858 140.175 127.88 146.317 127.88H161.814C167.956 127.88 172.935 132.85 172.935 138.991V187.352C172.935 202.456 161.882 215.253 149.302 221.966C135.15 229.517 117.014 226.056 103.427 226.056C92.2644 226.056 102.825 226.056 91.2145 226.056C85.0723 226.056 80.0728 221.077 80.0728 214.936V195.64C80.0728 189.499 85.0528 184.52 91.1951 184.52H108.988C120.31 184.52 135.196 187.352 135.196 170.36Z" fill="#037971"/>
+                    </svg>
+                  </FlexboxGrid.Item>
+                </FlexboxGrid>
+
+                <FlexboxGrid justify="end">
+                  <FlexboxGrid.Item>
+                    <button className="login-btn">Login</button>
+                  </FlexboxGrid.Item>                  
+                </FlexboxGrid>
+
+            </FlexboxGrid>
+                
+
+
+
+                <FlexboxGrid justify="space-around">
+                      <FlexboxGrid.Item>
+                          {
+                            <SideNav surveyResult={surveyResult} />
+                          }
+                      </FlexboxGrid.Item>
+                      <FlexboxGrid.Item>
+                          {
+                            <Profile surveyResult={surveyResult} />
+                          }                    
+                          {/* {
+                            <Booking />
+                          } */}
+
+
+{/* {console.log(items)} */}
+{/* <h1>{ props.settings.component }</h1> */}
+        {/* <ul>
+          {
+            items.map((item, index)=>{
+              return (
+                  <li key={index}>{item}</li>
+              )
+            })
+          }
+        </ul> */}
+                      </FlexboxGrid.Item>
+
+                </FlexboxGrid>
+            
+            </ZipCodeContext.Provider>
+            </ZipCodeValueContext.Provider>
+
+        </DoctorNameValueContext.Provider>
+      </DoctorNameContext.Provider>
+
+      </TimeAvailValueContext.Provider>
+      </AverageRatingValueContext.Provider>
     </div>
   );
 }

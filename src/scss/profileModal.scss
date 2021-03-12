@@ -1,0 +1,84 @@
+.rs-modal-lg{
+    width: 1268px;
+}
+
+
+.profileModal__login-btn{
+    width: 84px;
+    height: 38px;
+
+    background: #037971;
+border-radius: 2px;
+/* Body 1 */
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+letter-spacing: 0.5px;
+
+/* Jasper White */
+
+color: #FCFCFC;
+}
+
+
+.modal__doctorImage{
+    width: 165px;
+    height: 165px;
+}
+
+.profileModal__plan-options{
+    width: 285px;
+    height: 54px;
+    /* Jasper Green 2 */
+    background: #49A69D;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 38px;
+
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    
+    align-items: center;
+    text-align: center;
+
+    /* Jasper White */
+    color: #FCFCFC;     
+}
+
+// limit the doctor description area, otherwise it will extend outside the popup box.
+.doctor__about{
+    width: 400px;
+}
+
+
+.profileModal__patientImage{
+    width: 97px;
+    height: 97px;
+}
+
+.footer-flex{
+    background-color: #037971;    
+
+}
+
+.footer-section-paragraphs{
+    width: 300px;
+    height: 200px;
+    
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+            
+    /* Jasper White */
+    
+    color: #FCFCFC;
+}
