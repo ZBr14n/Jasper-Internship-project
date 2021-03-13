@@ -1,4 +1,8 @@
-<<<<<<< HEAD
+## Update (3/12/21):
+### I converted this project to standard react app which was originally from wordpress shortcode. Some functionalities no longer work due to missing dependencies that relied on wordpress, but most of app still works:
+https://demo-jasper-search-directory.netlify.app/
+
+
 ### **Update: ** Please see the other part of the project that includes a questionairre survey before this information gets processed to the search directory:
 https://github.com/ZBr14n/Jasper-Internship-project/tree/jasper-survey/medical-survey-jasper/app/src
 
