@@ -1,4 +1,5 @@
 ## Update (3/12/21):
+## All data in this app is demo data to work with and is used for testing purposes only. This app is only a rough draft of what it could be.
 ### I converted this project to standard react app which was originally from wordpress shortcode. Some functionalities no longer work due to missing dependencies that relied on wordpress, but most of app still works:
 https://demo-jasper-search-directory.netlify.app/
 
